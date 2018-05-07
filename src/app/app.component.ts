@@ -9,7 +9,7 @@ import {FrameworkConfigService} from '../fw/services/framework-config.service';
 })
 export class AppComponent {
   constructor(private frameworkConfigService: FrameworkConfigService) {
-    let config:FrameworkConfigService = {
+    let config: FrameworkConfigService = {
       socialIcons: [
         {imageFile: 'assets/social-fb-bw.png',
           alt: 'Facebook',
