@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import {FrameworkConfigService} from '../fw/services/framework-config.service';
+import {MenuService} from '../fw/services/menu.service';
+import {initalMenuItems} from './app.menu';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,9 @@ import {FrameworkConfigService} from '../fw/services/framework-config.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private frameworkConfigService: FrameworkConfigService) {
+  constructor(private frameworkConfigService: FrameworkConfigService,
+              private menuService: MenuService) {
+
     let config: FrameworkConfigService = {
       socialIcons: [
         {imageFile: 'assets/social-fb-bw.png',
@@ -28,5 +32,7 @@ export class AppComponent {
     };
 
     frameworkConfigService.configure(config);
+
+    menuService.items = initalMenuItems;
   }
 }
