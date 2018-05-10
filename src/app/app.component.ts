@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {FrameworkConfigService} from '../fw/services/framework-config.service';
+import {FrameworkConfigService, FrameworkConfigSettings} from '../fw/services/framework-config.service';
 import {MenuService} from '../fw/services/menu.service';
 import {initalMenuItems} from './app.menu';
 
@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private frameworkConfigService: FrameworkConfigService,
               private menuService: MenuService) {
 
-    let config: FrameworkConfigService = {
+    let config: FrameworkConfigSettings = {
       socialIcons: [
         {imageFile: 'assets/social-fb-bw.png',
           alt: 'Facebook',
@@ -26,7 +26,7 @@ export class AppComponent {
           link: 'http://www.twitter.com'}
       ],
       showLanguageSelector: true,
-      showUserControls: true,
+      showUserControl: true,
       showStatusBar: true,
       showStatusBarBreakpoint: 800
     };
