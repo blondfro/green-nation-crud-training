@@ -12,4 +12,10 @@ export interface MenuItem {
 export class MenuService {
   items: Array<MenuItem>;
   isVertical = false;
+  showingLeftSideMenu = false;
+
+  toggleLeftSideMenu(): void {
+    this.showingLeftSideMenu = !this.showingLeftSideMenu;
+  }
+
 }
