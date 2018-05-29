@@ -11,4 +11,5 @@ export interface MenuItem {
 
 export class MenuService {
   items: Array<MenuItem>;
+  isVertical = false;
 }
