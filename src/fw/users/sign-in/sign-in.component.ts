@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserApi} from '../user-api';
 
 @Component({
   selector: 'fw-sign-in',
@@ -10,7 +11,7 @@ export class SignInComponent implements OnInit {
   formError: string;
   submitting = false;
 
-  constructor() { }
+  constructor(private userApi: UserApi) { }
 
   ngOnInit() {
   }
