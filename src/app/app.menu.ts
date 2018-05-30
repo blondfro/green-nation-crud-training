@@ -4,7 +4,7 @@ export let initalMenuItems: Array<MenuItem> = [
   {
     text: 'Dashboard',
     icon: 'glyphicon-dashboard',
-    route: '/dashboard',
+    route: 'dashboard',
     submenu: null
   },
   {
