@@ -10,7 +10,12 @@
   <span class="glyphicon glyphicon-chevron-down"></span>
 </div>
 
+<!--<div *ngIf="frameworkConfigService.showUserControls">-->
+  <!--<span>SIGN IN</span>-->
+<!--</div>-->
+
 <div *ngIf="frameworkConfigService.showUserControls">
-  <span>SIGN IN</span>
+  <span>James Morris</span>
+  <span class="sign-out" (click)="signOut()">SIGN OUT</span>
 </div>
 
