@@ -7,11 +7,24 @@ import {Component,
   Renderer} from '@angular/core';
 import {MenuItem, MenuService} from '../../services/menu.service';
 import {NavigationEnd, Router} from '@angular/router';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'fw-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [
+    trigger('visibilityChanged', [
+      transition(':enter', [ // :enter is an alias to 'void =>'
+        style({opacity: 0}),
+        animate(500, style({opacity: 1}))
+      ]),
+      transition(':leave', [ // :leave is an alias to '* => void'
+        animate(500, style({opacity: 0}))
+        ]
+      )
+    ])
+  ]
 })
 export class MenuItemComponent implements OnInit {
 
