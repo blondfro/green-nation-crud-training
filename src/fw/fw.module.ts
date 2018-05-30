@@ -17,6 +17,7 @@ import {MenuItemComponent} from './menus/menu-item/menu-item.component';
 import {RouterModule} from '@angular/router';
 import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
 import {SignInComponent} from './users/sign-in/sign-in.component';
+import {RegisterUserComponent} from './users/register-user/register-user.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import {SignInComponent} from './users/sign-in/sign-in.component';
     MenuItemComponent,
     PopupMenuComponent,
     SignInComponent,
+    RegisterUserComponent
   ],
   providers: [
     FrameworkConfigService,
