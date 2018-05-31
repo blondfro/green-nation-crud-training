@@ -14,7 +14,7 @@ export class AppDataService {
   private countries: Array<Country> = [
     {id: 1, name: 'Switzerland', epiIndex: 87.67},
     {id: 2, name: 'Luxembourg', epiIndex: 83.29},
-    {id: 3, name: 'Austrailia', epiIndex: 83.4},
+    {id: 3, name: 'Australia', epiIndex: 83.4},
     {id: 4, name: 'Singapore', epiIndex: 81.78},
     {id: 5, name: 'Czech Republic', epiIndex: 81.47},
     {id: 6, name: 'Germany', epiIndex: 80.47},
