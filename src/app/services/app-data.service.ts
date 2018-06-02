@@ -50,13 +50,13 @@ export class AppDataService {
     return Observable.of(this.countries);
   }
 
-  getCountry(id: number): Observable<any> {
-    const country = this.countries.find(c => c.id === id);
+  getCountry(id: number): Observable<Country> {
+    const country = this.countries.find(c => c.id == id);
     return Observable.of(country);
   }
 
   updateCountry(updatedCountry: Country): Observable<any> {
-    const country = this.countries.find(c => c.id === updatedCountry.id);
+    const country = this.countries.find(c => c.id == updatedCountry.id);
     Object.assign(country, updatedCountry);
     return Observable.of(country);
   }
