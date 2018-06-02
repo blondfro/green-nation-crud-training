@@ -58,6 +58,6 @@ export class AppDataService {
   updateCountry(updatedCountry: Country): Observable<any> {
     const country = this.countries.find(c => c.id == updatedCountry.id);
     Object.assign(country, updatedCountry);
-    return Observable.of(country);
+    return Observable.of(country).delay(2000);
   }
 }
